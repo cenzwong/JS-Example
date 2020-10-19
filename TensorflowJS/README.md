@@ -14,13 +14,14 @@ Originally got deeplearn.js --> tensorflow.js using webGL
 
 
 ## The basic
+``` js
 const data = tf.tensor([1,2,3,4]);
 // const data = tf.tensor([1,2,3,4], [2,2]); // the latter is the shape
 //data.print();
 console.log(data.toString());  // same as data.print()
 
 + tf.tensor (values, shape?, dtype?)
-
+```
 ## Variabel & Operations
 ` javascript
 const tense = tf.tensor3d(values, shape, 'int32');
@@ -36,6 +37,7 @@ const varTense = tf.variable(tense);  // make the current tense into variable
 all operation must create a new tensor.
 ***
 ## Memory management
+```js
 tf.memory().numTensors // to get the total number it used
 
 tense.dispose(); //To dispose the tensor manually
@@ -58,3 +60,4 @@ tf.tidy(() => {
 Optimizer job is to min the loss()
 predict()
 fit() ==> for training the model
+```
