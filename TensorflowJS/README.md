@@ -23,7 +23,7 @@ console.log(data.toString());  // same as data.print()
 + tf.tensor (values, shape?, dtype?)
 ```
 ## Variabel & Operations
-` javascript
+``` javascript
 const tense = tf.tensor3d(values, shape, 'int32');
 tense.data().then(function(stuff){
     //wait until the data is loaded onto the GPU
@@ -36,6 +36,7 @@ tense.set(0,10); // x --> cannot be changed in tensor form.
 const varTense = tf.variable(tense);  // make the current tense into variable 
 all operation must create a new tensor.
 ***
+```
 ## Memory management
 ```js
 tf.memory().numTensors // to get the total number it used
